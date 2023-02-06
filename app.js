@@ -14,6 +14,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 connectToDB();
-app.get("/", userRoutes);
+app.use("/", userRoutes);  // prev its was get - its an error
 
 module.exports = app
